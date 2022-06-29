@@ -1,32 +1,32 @@
 import styled from 'styled-components';
 import { Field } from 'formik';
 
-const Label = styled.label`
+export const Label = styled.label`
   font-size: 24px;
   margin-top: 10px;
 `;
 
-const PasswordField = styled(Field)`
+export const PasswordField = styled(Field)`
   height: 40px;
   font-size: 24px;
 `;
 
-const EmailField = styled(Field)`
+export const EmailField = styled(Field)`
   height: 40px;
   font-size: 24px;
 `;
 
-const ProjectNameField = styled(Field)`
+export const ProjectNameField = styled(Field)`
   height: 40px;
   font-size: 24px;
 `;
 
-const BilledAmountField = styled(Field)`
+export const BilledAmountField = styled(Field)`
   height: 40px;
   font-size: 24px;
 `;
 
-const SubmitButton = styled.input`
+export const SubmitButton = styled.input`
   height: 40px;
   width: 100px;
   display: flex;
@@ -39,12 +39,31 @@ const SubmitButton = styled.input`
   margin-top: 40px;
 `;
 
-const ErrorLabel = styled.div`
+export const ErrorLabel = styled.div`
   font-size: 26px;
   color: red;
 `;
 
-const FileInput = styled.input`
+export const FileInput = styled.input`
   margin-top: 10px;
   font-size: 16px;
+`;
+
+export const Title = styled.h1`
+  white-space: pre-line;
+`;
+
+export const CheckboxContainer = styled.div`
+  display: flex;
+  height: 50px;
+  align-items: center;
+`;
+
+export const RememberMeCheckboxField = styled(Field)`
+  margin-top: 10px;
+`;
+
+export const CheckboxLabel = styled(Label)`
+  margin-top: 7px;
+  margin-left: 10px;
 `;

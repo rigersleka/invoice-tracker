@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-const Container = styled.div`
+export const Container = styled.div`
   display: flex;
   flex-direction: column;
   flex: 1;
@@ -8,15 +8,10 @@ const Container = styled.div`
   align-items: center;
 `;
 
-const ContainerContainer = styled.div`
+export const ContentContainer = styled.div`
   display: flex;
   flex-direction: column;
   width: 600px;
   margin-top: 0px;
 `;
-
-const Title = styled.h1`
-  white-space: pre-line;
-`;
-
 
