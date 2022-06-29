@@ -1,11 +1,11 @@
 import RootComponent from "./components/RootComponent";
-
+import {Container} from './style-components/Container.styled';
 
 function App() {
   return (
-    <div className="App">
+    <Container>
      <RootComponent />
-    </div>
+    </Container>
   );
 }
 
