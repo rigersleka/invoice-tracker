@@ -48,3 +48,22 @@ export const FileInput = styled.input`
   margin-top: 10px;
   font-size: 16px;
 `;
+
+export const Title = styled.h1`
+  white-space: pre-line;
+`;
+
+export const CheckboxContainer = styled.div`
+  display: flex;
+  height: 50px;
+  align-items: center;
+`;
+
+export const RememberMeCheckboxField = styled(Field)`
+  margin-top: 10px;
+`;
+
+export const CheckboxLabel = styled(Label)`
+  margin-top: 7px;
+  margin-left: 10px;
+`;
