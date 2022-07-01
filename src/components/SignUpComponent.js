@@ -92,9 +92,7 @@ const SignUpComponent = () => {
                 {(error) => <ErrorLabel>{error}</ErrorLabel>}
               </ErrorMessage>
 
-              <SubmitButton type='button' disabled={props.isSubmitting}>
-                Submit
-              </SubmitButton>
+              <SubmitButton type='submit' />
             </SignUpForm>
           )}
         </Formik>
