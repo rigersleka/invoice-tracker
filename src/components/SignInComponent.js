@@ -10,9 +10,8 @@ import {
 import {
   Title,
   Label,
-  EmailField,
+  InputNameField,
   ErrorLabel,
-  PasswordField,
   CheckboxContainer,
   RememberMeCheckboxField,
   CheckboxLabel,
@@ -64,14 +63,14 @@ const SignInComponent = () => {
           {(props) => (
             <SignInForm>
               <Label>Email</Label>
-              <EmailField name='email' type='email' />
+              <InputNameField name='email' type='email' />
 
               <ErrorMessage name='email'>
                 {(error) => <ErrorLabel>{error}</ErrorLabel>}
               </ErrorMessage>
 
               <Label>Password</Label>
-              <PasswordField name='password' type='password' />
+              <InputNameField name='password' type='password' />
 
               <ErrorMessage name='password'>
                 {(error) => <ErrorLabel>{error}</ErrorLabel>}

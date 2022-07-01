@@ -10,10 +10,9 @@ import {
   Title,
 } from '../style-components/Container.styled';
 import {
-  EmailField,
   ErrorLabel,
   Label,
-  PasswordField,
+  InputNameField,
   SubmitButton,
 } from '../style-components/Element.styles';
 
@@ -24,8 +23,8 @@ const SignUpForm = styled(Form)`
   border: 1px solid black;
 `;
 
-/** VALIDATION using YUP */
-let EmailSchema = Yup.object().shape({
+/** YUP validation */
+let SignupSchema = Yup.object().shape({
   email: Yup.string().email('Invalid Email').required('Email cant be empty'),
 });
 
@@ -37,26 +36,26 @@ let PasswordSchema = Yup.object().shape({
 });
 
 const SignUpComponent = () => {
-  const handleSubmit = (values) => {
+  function handleSubmit(values) {
     return new Promise((resolve, reject) => {
       setTimeout(() => {
         resolve();
         alert(JSON.stringify(values));
       }, 5000);
     });
-  };
+  }
 
-  const validatePassword = (value) => {
-    let error = undefined;
+  function validatePassword(value) {
+    var error = undefined;
 
     try {
       PasswordSchema.validateSync({ password: value });
     } catch (validationError) {
-      error = validationError.error[0];
+      error = validationError.errors[0];
     }
 
     return error;
-  };
+  }
 
   return (
     <Container>
@@ -66,32 +65,35 @@ const SignUpComponent = () => {
         <Formik
           initialValues={{ email: '', password: '', confirmPassword: '' }}
           onSubmit={handleSubmit}
-          validationSchema={EmailSchema}
+          validationSchema={SignupSchema}
         >
           {(props) => (
             <SignUpForm>
               <Label>Email</Label>
-              <EmailField name='email' type='email' />
+              <InputNameField name='email' type='email' />
+
               <ErrorMessage name='email'>
                 {(error) => <ErrorLabel>{error}</ErrorLabel>}
               </ErrorMessage>
 
               <Label>Password</Label>
-              <PasswordField
+              <InputNameField
                 name='password'
-                type='password'
                 validate={validatePassword}
+                type='password'
               />
+
               <ErrorMessage name='password'>
                 {(error) => <ErrorLabel>{error}</ErrorLabel>}
               </ErrorMessage>
 
-              <Label>Password</Label>
-              <PasswordField
+              <Label>Confirm Password</Label>
+              <InputNameField
                 name='confirmPassword'
-                type='password'
                 validate={validatePassword}
+                type='password'
               />
+
               <ErrorMessage name='confirmPassword'>
                 {(error) => <ErrorLabel>{error}</ErrorLabel>}
               </ErrorMessage>

@@ -11,18 +11,8 @@ export const PasswordField = styled(Field)`
   font-size: 24px;
 `;
 
-export const EmailField = styled(Field)`
-  height: 40px;
-  font-size: 24px;
-`;
-
-export const ProjectNameField = styled(Field)`
-  height: 40px;
-  font-size: 24px;
-`;
-
-export const BilledAmountField = styled(Field)`
-  height: 40px;
+export const InputNameField = styled(Field)`
+  heightl: 40px;
   font-size: 24px;
 `;
 
