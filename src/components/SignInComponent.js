@@ -1,8 +1,8 @@
 import React from 'react';
-import styled from 'styled-components';
 import { Formik, Form, ErrorMessage } from 'formik';
+import styled from 'styled-components';
 
-/* Container Style */
+/* import Styles */
 import {
   Container,
   ContentContainer,
@@ -49,7 +49,6 @@ const SignInComponent = () => {
       errors.password = 'Password should be at least 8 characters';
     }
 
-    console.log(values);
     return errors;
   };
 

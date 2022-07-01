@@ -1,7 +1,9 @@
-import { Formik, Form, ErrorMessage } from 'formik';
 import React from 'react';
+import { Formik, Form, ErrorMessage } from 'formik';
 import styled from 'styled-components';
 import * as Yup from 'yup';
+
+/* import Styles */
 import {
   Container,
   ContentContainer,
@@ -22,6 +24,7 @@ const SignUpForm = styled(Form)`
   border: 1px solid black;
 `;
 
+/** VALIDATION using YUP */
 let EmailSchema = Yup.object().shape({
   email: Yup.string().email('Invalid Email').required('Email cant be empty'),
 });
@@ -54,6 +57,7 @@ const SignUpComponent = () => {
 
     return error;
   };
+
   return (
     <Container>
       <ContentContainer>
@@ -92,7 +96,7 @@ const SignUpComponent = () => {
                 {(error) => <ErrorLabel>{error}</ErrorLabel>}
               </ErrorMessage>
 
-              <SubmitButton type='submit' />
+              <SubmitButton type='submit' disabled={props.isSubmitting} />
             </SignUpForm>
           )}
         </Formik>
