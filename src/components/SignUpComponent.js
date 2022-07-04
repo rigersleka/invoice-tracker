@@ -30,7 +30,7 @@ let SignupSchema = Yup.object().shape({
 
 let PasswordSchema = Yup.object().shape({
   password: Yup.string()
-    .required('Password cant be emptyca')
+    .required('Password cant be empty')
     .test('len', 'Very weak', (val) => val.length > 5)
     .test('len', 'Weak', (val) => val.length > 8),
 });

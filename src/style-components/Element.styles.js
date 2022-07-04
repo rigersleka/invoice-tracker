@@ -6,14 +6,28 @@ export const Label = styled.label`
   margin-top: 10px;
 `;
 
+export const InputNameField = styled(Field)`
+  height: 40px;
+  font-size: 24px;
+`;
+
+export const ErrorLabel = styled.div`
+  font-size: 26px;
+  color: red;
+`;
+
+export const Title = styled.h1`
+  white-space: pre-line;
+`;
+
 export const PasswordField = styled(Field)`
   height: 40px;
   font-size: 24px;
 `;
 
-export const InputNameField = styled(Field)`
-  heightl: 40px;
-  font-size: 24px;
+export const FileInput = styled.input`
+  margin-top: 10px;
+  font-size: 16px;
 `;
 
 export const SubmitButton = styled.input`
@@ -29,19 +43,6 @@ export const SubmitButton = styled.input`
   margin-top: 40px;
 `;
 
-export const ErrorLabel = styled.div`
-  font-size: 26px;
-  color: red;
-`;
-
-export const FileInput = styled.input`
-  margin-top: 10px;
-  font-size: 16px;
-`;
-
-export const Title = styled.h1`
-  white-space: pre-line;
-`;
 
 export const CheckboxContainer = styled.div`
   display: flex;
